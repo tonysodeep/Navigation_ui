@@ -117,8 +117,8 @@ class MainActivity : AppCompatActivity() {
 
         buttonLogout.setOnClickListener {
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("Androidly Alert")
-            builder.setMessage("Do you want to delet?")
+            builder.setTitle("Alert")
+            builder.setMessage("Do you want to log out?")
             builder.setPositiveButton("Yes"){dialogInterface, which ->
                 editor.remove("STRING_KEY")
                 editor.apply()
@@ -127,7 +127,7 @@ class MainActivity : AppCompatActivity() {
                 buttonLogin.visibility = View.VISIBLE
             }
             builder.setNeutralButton("Cancel"){dialogInterface , which ->
-                Toast.makeText(applicationContext,"clicked cancel\n operation cancel",Toast.LENGTH_LONG).show()
+                Toast.makeText(applicationContext,"Cancel",Toast.LENGTH_LONG).show()
             }
             val alertDialog: AlertDialog = builder.create()
             // Set other dialog properties
